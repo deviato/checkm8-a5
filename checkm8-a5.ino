@@ -1,6 +1,6 @@
 #include "Usb.h"
 
-#define A5_8942
+#define A5_8940
 #include "constants.h"
 
 USB Usb;
@@ -31,6 +31,7 @@ uint8_t send_out(uint8_t * io_buf, uint8_t pktsize)
 }
 
 void setup() {
+  pinMode(6,OUTPUT);
   Serial.begin(115200);
   Serial.println("checkm8 started");
   if(Usb.Init() == -1)
